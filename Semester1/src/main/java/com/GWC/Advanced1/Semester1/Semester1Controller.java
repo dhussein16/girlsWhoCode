@@ -14,6 +14,10 @@ public class Semester1Controller {
 	public String home() {
 		return "index";
 	}
-	
+
+	@GetMapping("/home")
+	public String home2() {
+		return "index2";
+	}
 
 }
