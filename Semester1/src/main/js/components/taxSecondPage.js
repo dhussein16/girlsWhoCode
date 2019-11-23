@@ -1,11 +1,12 @@
 //asks what state someone is in to get the tax rate
 import React from'react';
 import { Redirect } from 'react-router-dom';
-import {Dropdown} from 'react-bootstrap';
+import {Dropdown, ButtonGroup, Button} from 'react-bootstrap';
 
 class TaxSecondPage extends React.Component{
     
     render (){
+        document.body.style.backgroundColor = "#00A3F9";
         return (
             <div>
         <h2>What state are you in?</h2><Dropdown as={ButtonGroup}>

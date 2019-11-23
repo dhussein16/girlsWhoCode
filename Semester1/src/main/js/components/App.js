@@ -2,6 +2,9 @@ import React from'react';
 import { Redirect } from 'react-router-dom';
 import TaxMainPage from './taxMainPage.js';
 import { Button } from 'react-bootstrap';
+import TaxSecondPage from './taxSecondPage.js';
+import { Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 class App extends React.Component {
 
@@ -15,9 +18,16 @@ class App extends React.Component {
     render(){
 
         const {topic, count} = this.state;
-        return (<div> <h3>{this.returnATopic()}</h3>
+        return (<div> <h3>{this.returnATopic()}
+        <Router>
+			<div>
+				<Switch>
+					<Route exact path='/' component={TaxMainPage}/>
+                    <Route path='/second' component={TaxSecondPage}/>
+				</Switch>
+			</div>
+			</Router></h3>
 
-        <TaxMainPage/>
         </div>
       )
         
